@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Universidad Remington Cúcuta</title><!--Nombre de la pagina-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1"><!--Diseño responsive-->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <meta name="description" content="Simulador de pruebas ECAES"><!--los buscadores consultan la informacion de la pagina-->
+        <meta name="keywords" content="Remington,Ecaes,Simulador"><!--palabras clave para los buscadores-->
+        <link rel="stylesheet" type="text/css" href="CSS/Style.css"/><!--se enlasa al CSS para darle el estilo-->       
+        <link rel="stylesheet" href="Iconos/IcoMoon/Style.css"/><!--agrego los iconos como si fuera una fuente-->
+        <link rel="stylesheet" href="CSS/Normalize.css" /><!--Eliminar configuraciones predeterminadas de los navegadores-->
+        <script src="http://code.jquery.com/jquery-latest.js"></script><!---->
+        <script src="JavaScript/StickyMenu.js"></script><!--Enlazar al archivo JS menu pegajoso-->         
+        <script src="JavaScript/MenuResponsive.js"></script><!--Enlazar al archivo JS menu desplegable-->         
+        
+    </head>
+
+    <body>
+        <div class="Responsive"><!--hacer la pag adaptable-->              
+            <header>   	
+                <div class="Fijo">
+                    <div class="Titulo">
+                        <h1>Universidad Remington</h1>
+                    </div>
+                </div>                            
+            
+                <div class="Menu">
+                    <a href="#" class="ButtonMenu"><span class="icon-menu"></span>Menu</a>
+                </div>
+                <nav><!--crear un menu de botones con seleccion-->   	   		
+                    <ul><!--se define la lista y los iconos que se van a agregar-->
+                        <li><a href="#"><span class="icon-home"></span>Inicio</a></li>
+                        <li><a href="#"><span class="icon-library"></span>Quienes Somos</a></li>
+                        <li class="Inicio">
+                            <a href="#"><span class="icon-users"></span>Login<span class="caret icon-chevron-small-down"></span></a>
+                            <ul class="SubMenu">                               
+                                <li><a href="#">Corporacion<span class="icon-office"></span></a></li>
+                                <li><a href="#">Universitaria<span class="icon-office"></span></a></li>
+                                <li><a href="#">Remington<span class="icon-office"></span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span class="icon-envelop"></span>Contactenos</a></li>
+                    </ul>                    	          	
+                </nav>   
+            </header>    
+    <!--        
+        function Mostrar(){
+            $sql="SELECT * FROM Usuarios";
+            $rs=mysql_query($sql);
+            $res=array();
+            while($BUSCO=  mysql_fetch_assoc($rs)>0){
+                $res[]=$BUSCO;
+            }return $res;
+
+        }
+    -->        
+            <div id="Formulario">
+                <fieldset>                
+                    <legend>Formulario</legend>
+                    <form method="post" action="PHP/Guardar.php">                    
+                        <table>
+                            <tr>
+                                <td>Nombre:<input type="text" name="CampoNombre"/></td>                   
+                            </tr>
+                            <tr>
+                                <td>Contraseña:<input type="text" name="CampoContraseña"/></td>
+                            </tr>
+                            <tr>
+                                <td>E-mail:<input type="text" name="CampoCorreo"/></td>                   
+                            </tr>
+                            <tr>
+                                <td><input type="submit" name="submit" id="submit" value="Guardar" class="required"/><!--boton guardar-->
+                                    <input type="reset" id="reset" value="Borrar"/></td><!--boton reset-->              
+                            </tr>
+                        </table>
+                    </form>                               
+                </fieldset>
+            </div>
+
+            <!--<div class="Cuerpo1">-->
+                <section class="Cuerpo1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor odio in sodales varius. Nullam tincidunt, ipsum ut tempus tincidunt, velit sapien varius orci, eu vestibulum erat magna ut magna. Integer pulvinar mauris eget ipsum pharetra tincidunt. Nulla eget pellentesque lorem, sit amet congue lacus. Nunc non mattis enim. Morbi interdum facilisis magna, in pellentesque felis fringilla sit amet. Nam eu quam pretium, consequat mi interdum, sodales quam. Quisque eget molestie leo. Mauris luctus velit lacus, in accumsan nulla aliquet eu. Donec non pellentesque tortor.</p>
+                </section>
+                <aside>
+                    <p>Nullam malesuada pellentesque quam quis vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus nec porta purus. Nunc vehicula a nunc non faucibus. In cursus mi ex, sit amet porttitor diam tincidunt iaculis. Praesent non molestie nisi. Proin in mattis elit. Curabitur eget dolor volutpat, facilisis mi ac, faucibus diam. Mauris vitae velit velit. Donec posuere, urna non rhoncus feugiat, nulla orci facilisis erat, eu eleifend odio dolor in est. Vestibulum vitae fermentum metus. Vivamus ornare neque eu commodo hendrerit. Aenean elementum mauris sit amet pellentesque sodales. Etiam id convallis nibh. Fusce non est consectetur, porttitor sem ac, volutpat quam. Fusce in libero ut velit lacinia pharetra.</p>
+                </aside>    
+            <!--</div>-->
+            <div class="Cuerpo2">
+                <p>Curabitur vel tristique neque, a tempus purus. Nam eu diam cursus, tincidunt neque sed, elementum nulla. Quisque diam quam, bibendum ac molestie ac, pretium quis eros. Etiam eu ultrices velit. Vivamus quis quam urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id ultricies odio, non maximus est. Pellentesque eget elementum tortor, venenatis mollis sem. Nullam eget facilisis erat, eu laoreet tortor.</p>
+            </div>    
+    
+            <footer>
+                <img src="Images/Footer.jpg">
+            </footer>                     
+        </div>
+    </body> 
+</html> 

@@ -1,0 +1,296 @@
+/* 
+    Created on : 6/03/2015, 07:03:03 PM
+    Author     : REYMAR
+*/
+@import url('Normalize.css');/*elimino la configuracion por defecto para darle una propia*/
+@import url('Font.css');/*cargo la tipogafria*/
+
+.Responsive{
+    width:90%; 
+    margin:auto;
+    font-family:Aaargh;
+    color:black;
+}
+
+.Fijo{
+    /*mantener el header pegado*/
+    position:fixed;
+    top:0px; 
+    z-index:10;
+    box-shadow:0px 4px 3px rgba(0,0,0,.5);
+    /*mantener el header pegado*/
+    width:100%;
+    float:left;
+    background: rgb(255,68,68); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(255,68,68,1) 31%, rgba(68,68,255,1) 90%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(31%,rgba(255,68,68,1)), color-stop(90%,rgba(68,68,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,68,68,1) 31%,rgba(68,68,255,1) 90%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,68,68,1) 31%,rgba(68,68,255,1) 90%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,68,68,1) 31%,rgba(68,68,255,1) 90%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,68,68,1) 31%,rgba(68,68,255,1) 90%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4444', endColorstr='#4444ff',GradientType=1 ); /* IE6-9 */    
+}
+
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    background:url(../Images/school.png);
+}
+
+.Menu {
+	display:none;
+}
+
+header {
+	width: 100%;
+}
+
+header nav {
+	background:#023859;
+	z-index:1000;
+	max-width: 1000px;
+	width:95%;
+	margin:20px auto;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+header nav ul li:hover {
+	background:#E6344A;
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+
+header nav ul li a span {
+	margin-right:10px;
+}
+
+header nav ul li:hover .Inicio {
+	display:block;
+}
+
+header nav ul li .Inicio {
+	display: none;
+	background:#011826;
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+
+header nav ul li .Inicio li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .Inicio li a {
+	display: block;
+}
+
+header nav ul li .Inicio li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding-top:80px;
+	}
+
+	.Menu {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+	.Menu .ButtonMenu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.Menu span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .Inicio {
+		display: none;
+	}
+
+	header nav ul li .Inicio {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .Inicio li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+}
+/*
+#Titulo{
+    float:left;
+    width:auto;    
+    font-size:18px; 
+}
+
+#Titulo h1{
+    font-weight:bold;/*el grosor de la letra: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit
+}
+*/
+/*
+header #Listahorizontal nav ul li{
+    display:inline-block; 
+    padding-top:23px; 
+}
+
+header #Listahorizontal nav{
+    float:right;
+    width:auto;
+    text-align:left;  
+    font-size:15px; 
+}
+*/
+body{/*se define que el fondo de la pagina sera de color negro*/
+    background:url(../Images/school.png); 
+    padding-top:120px; 
+}
+/*
+.button {
+    background:#7f8c8d;
+    color:#fff;
+    margin:5px;
+    padding:10px;
+    text-align:rigth;
+    width:auto;
+    text-decoration:none;
+}
+ 
+.button span {/*icono del boton del header
+    margin-right:5px;
+}
+
+.button.blue {
+    background:none;
+}
+
+.button.radius {
+    border-radius:50px;
+}
+
+.button:hover {/*cuando pasa el mouse por encima
+    background:#2980b9;
+}
+*/
+fieldset{   
+    width:500px;
+    font-size:20px;
+    margin:auto;
+    padding:30px;
+}
+
+div table tr td{   
+    padding:10px;
+}
+
+/*a son los apuntadores*/
+.Cuerpo1{/*los a que este dentro del p son los que aplicaran el cambio*/
+    font-size:2em;/*se adapta al padre mas cercano(head,foot,etc)equivale a 1*el valor que tomo el padre*/ 
+    width:60%;
+    background:yellowgreen; 
+    float:left; 
+    padding:10px; 
+    box-sizing:border-box;/*permite que el padding no aumente los poxeles que ocupa el objeto*/ 
+}/*si quiero seleccionar un componente especifico le puedo asignar una clase .class="nombre" despues puedo modificar la clase y se aplicaran los cambios a todos los miembros de la clase https://www.youtube.com/watch?v=uqkj7HQ7ids 11:50*/
+
+aside{
+    font-size:1em;/*se adapta al padre mas cercano(head,foot,etc)equivale a 1*el valor que tomo el padre*/ 
+    width:40%;
+    float:right; 
+    background:white; 
+    display:inline-block;
+}
+
+.Cuerpo2{/*los a que este dentro del p son los que aplicaran el cambio*/
+    font-size:2em;/*se adapta al padre mas cercano(head,foot,etc)equivale a 1*el valor que tomo el padre*/ 
+    width:60%;
+    margin:auto; 
+    background:yellow; 
+    float:left; 
+}
+
+footer img{
+    width:100%;
+    margin:auto;
+    margin-top:10px; 
+}
+
+/*imagen width:100% height:auto*/
+
+@media(max-width:800px){
+    .Cuerpo1{
+        width:100%; 
+    }
+    .Cuerpo2{
+        width:100%; 
+    }
+    aside{
+        width:100%; 
+    }
+}
